@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1b1535">
+<title>Glimmo</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/static/icon-192.png">
+<link rel="apple-touch-icon" href="/static/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body data-state="idle">
+<main class="app">
+  <section class="stage">
+    <button class="orb" id="orb" aria-label="Tap to talk to Glimmo">
+      <span class="ring r1"></span><span class="ring r2"></span>
+      <span class="glow"></span>
+      <span class="body">
+        <span class="shine"></span>
+        <span class="eye l"></span><span class="eye r"></span>
+        <span class="cheek l"></span><span class="cheek r"></span>
+        <span class="mouth"></span>
+      </span>
+    </button>
+    <p class="status" id="status" aria-live="polite"></p>
+  </section>
+
+  <section class="lower">
+    <div class="intro" id="intro">
+      <h1>Glimmo</h1>
+      <p>A tiny light that listens and talks back.</p>
+      <button class="talk" id="talk">Talk to Glimmo</button>
+    </div>
+
+    <div class="chat" id="chat" aria-hidden="true">
+      <div class="messages" id="messages"></div>
+      <div class="composer">
+        <input id="input" type="text" placeholder="Type or tap the mic" autocomplete="off" enterkeyhint="send">
+        <button class="icon mic" id="mic" aria-label="Speak">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+        </button>
+        <button class="icon send" id="send" aria-label="Send">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+      <button class="back" id="back">Close chat</button>
+    </div>
+  </section>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>
